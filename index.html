@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h5 class="title">Розпізнавання кількості пальців, що показуються на відео</h5>
+	</div>
+	<div class="video-number-wrapper">
+		<video autoplay playsinline muted id="camera"></video>
+		<div class="prediction">
+			<span class="badge" id="prediction">0</span>
+		</div>
+	</div>
+	<div class="container-fluid">
+			<div class="col-md-6 ml-auto align-center">
+				<div class="numbers">
+					<button type="button" id="0" class="btn btn-outline-primary" onclick="handleButton(this)">0</button>
+					<button type="button" id="1" class="btn btn-outline-primary" onclick="handleButton(this)">1</button>
+					<button type="button" id="2" class="btn btn-outline-primary" onclick="handleButton(this)">2</button>
+					<button type="button" id="3" class="btn btn-outline-primary" onclick="handleButton(this)">3</button>
+					<button type="button" id="4" class="btn btn-outline-primary" onclick="handleButton(this)">4</button>
+					<button type="button" id="5" class="btn btn-outline-primary" onclick="handleButton(this)">5</button>
+					<button type="button" id="6" class="btn btn-outline-primary" onclick="handleButton(this)">6</button>
+					<button type="button" id="7" class="btn btn-outline-primary" onclick="handleButton(this)">7</button>
+					<button type="button" id="8" class="btn btn-outline-primary" onclick="handleButton(this)">8</button>
+					<button type="button" id="9" class="btn btn-outline-primary" onclick="handleButton(this)">9</button>
+				</div>
+			</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 auto">
+				<ul class="list-group">
+					<li class="list-group-item">0
+						<span id="samples_0" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">1
+						<span id="samples_1" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">2
+						<span id="samples_2" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">3
+						<span id="samples_3" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">4
+						<span id="samples_4" class="badge badge-primary badge-pill"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6 auto">
+				<ul class="list-group">
+					<li class="list-group-item">5
+						<span id="samples_5" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">6
+						<span id="samples_6" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">7
+						<span id="samples_7" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">8
+						<span id="samples_8" class="badge badge-primary badge-pill"></span>
+					</li>
+					<li class="list-group-item">9
+						<span id="samples_9" class="badge badge-primary badge-pill"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="align-center">
+			<button type="button" class="btn btn-outline-primary" id="train" onclick="doTraining()">
+				Тренувати
+			</button>
+			<button type="button" class="btn btn-outline-primary" id="saveModel" onclick="saveModel()">
+				Зберегти
+			</button>
+		</div>
+		<div class="align-center">
+			<button type="button" class="btn btn-outline-warning" id="startPredicting" onclick="setPredicting(true)">
+				<span>Почати передбачення</span>
+			</button>
+			<button type="button" class="btn btn-outline-warning" id="stopPredicting" onclick="setPredicting(false)">
+				Зупинити передбачення
+			</button>
+		</div>
+	</div>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>

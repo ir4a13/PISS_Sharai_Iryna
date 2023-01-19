@@ -1,0 +1,139 @@
+body {
+    background: #f2f2f2;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1080px;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.header {
+    padding: 16px 24px 36px 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.video-number-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.video-number-wrapper video, .prediction {
+    height: 500px;
+    width: 500px;
+    margin: 0 24px;
+}
+
+.prediction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 240px;
+    background-color: beige;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.numbers .btn {
+    padding: 24px 32px;
+    background-color: mediumseagreen;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.numbers .btn:hover {
+    background-color: #2e8b57;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+.list-group {
+    padding-inline-start: 24px;
+}
+
+.container-fluid .list-group:last-child {
+    margin-right: 40px;
+}
+
+.list-group-item {
+    list-style: none;
+    width: 460px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item .badge {
+    background-color: darkolivegreen;
+    border-radius: 40px;
+    height: 20px;
+    width: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer {
+    display: flex;
+    padding: 12px 24px;
+}
+
+.footer .btn {
+    padding: 8px 32px;
+    width: 480px;
+    border: 2px solid mediumseagreen;
+    border-radius: 5px;
+    background-color: white;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.footer .btn:hover {
+    background-color: #e7e7e7;
+}
+
+.footer div:last-child {
+    margin-left: 40px;
+}
